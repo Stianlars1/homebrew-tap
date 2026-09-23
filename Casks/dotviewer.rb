@@ -1,6 +1,6 @@
 cask "dotviewer" do
-  version "1.5.7"
-  sha256 "b46390296a7dabdd15a54b802bd5dade3fde99b3bc61af1dc2ae8f0d8bd7236d"
+  version "1.5.8"
+  sha256 "1e3dbc6314036a1eaff4cebfd659335251b6041f55efca96e9147837352bdaa3"
 
   url "https://github.com/stianlars1/dotViewer/releases/download/v#{version}/dotViewer-#{version}.dmg"
   name "dotViewer"
