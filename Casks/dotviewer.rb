@@ -17,19 +17,6 @@ cask "dotviewer" do
 
   app "dotViewer.app"
 
-  postflight do
-    # Register the Quick Look extensions with macOS so Finder picks them up
-    # immediately, without requiring the user to launch dotViewer first.
-    system_command "/usr/bin/pluginkit",
-                   args: ["-e", "use", "-i", "com.stianlars1.dotViewer.QuickLookPreview"],
-                   sudo: false
-    system_command "/usr/bin/pluginkit",
-                   args: ["-e", "use", "-i", "com.stianlars1.dotViewer.QuickLookThumbnail"],
-                   sudo: false
-    # Rebuild the Quick Look server cache so previews work right away.
-    system_command "/usr/bin/qlmanage", args: ["-r"], sudo: false
-  end
-
   uninstall launchctl: "com.stianlars1.dotViewer",
             quit:      "com.stianlars1.dotViewer"
 
